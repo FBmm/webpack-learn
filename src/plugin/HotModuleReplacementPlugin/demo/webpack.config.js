@@ -10,14 +10,14 @@ var webpackConfig = {
   mode: 'development',
   plugins: [
     new HtmlWebpackPlugin({
-      title: `webpack demo`,
-    }),
-    new HtmlWebpackPlugin({
       title: `webpack demo ${new Date().toLocaleString()}`,
       template: 'index.html',
       filename: 'test.html',
       hash: true
     }),
+    new webpack.HotModuleReplacementPlugin({
+      // Options...
+    })
   ]
 };
 
