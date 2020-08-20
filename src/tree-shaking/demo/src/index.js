@@ -1,6 +1,10 @@
-import { add } from './math'
+import "lodash";
 
-console.log(add(1+2))
+function clone(source) {
+  return cloneDeep(source)
+}
 
-const o = { a: 1 }
+const obj = {a: 1}
+const clonedObj = clone(obj)
+console.log(clonedObj, clonedObj === obj)
 
